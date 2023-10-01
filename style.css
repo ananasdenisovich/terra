@@ -1,5 +1,8 @@
 body{
-  background-color: white;
+  background-image: url("pngs/back.png");
+  background-attachment: fixed;
+  font-family: Arial, serif;
+  text-decoration-color: rgba(13,58,63,255);
 }
 .icon, .navbar-brand{
   display: inline;
@@ -17,7 +20,7 @@ body{
 .container{
   background-color: rgba(248,249,250,255);
   width: 80%;
-  height: 100%;
+  height: 100vh;
 }
 .d-block{
   width: 50px;
@@ -90,9 +93,14 @@ form{
   alignment: center;
   padding-left: 30px;
 }
-#foronline{
+.online{
   float: left;
 }
 .modal{
   clear-side: right;
+}
+footer{
+  text-align: center;
+  background-color: palegoldenrod;
+  font-style: italic;
 }
