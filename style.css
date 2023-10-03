@@ -1,5 +1,5 @@
 body{
-  background-image: url("pngs/back.png");
+  background-image: url("back.png");
   background-attachment: fixed;
   font-family: Arial, serif;
   text-decoration-color: rgba(13,58,63,255);
@@ -21,6 +21,7 @@ body{
   background-color: rgba(248,249,250,255);
   width: 80%;
   height: 100vh;
+  border: 3px inset;
 }
 .d-block{
   width: 50px;
