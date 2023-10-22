@@ -60,6 +60,37 @@
     <div class="col">+7-775-666-36-19</div>
     <div class="col">terra.edu@bk.ru</div>
   </div>
+  <!----------------Feedback---------------->
+  <h2>Rate Our Site</h2>
+  <form id="rating-form">
+    <div>
+      <label for="rating-label">Rate us:</label>
+      <div class="rating" id="rating-label">
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5"></label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4"></label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3"></label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2"></label>
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1"></label>
+      </div>
+    </div>
+    <div>
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="feedback-message" class="hidden">
+    Thank you for your feedback!
+  </div>
+
+
+
+
 </div>
 </section>
 <section>
@@ -68,5 +99,6 @@
     <p>Site made by Karima💜</p>
   </footer>
 </section>
+<script src="contactsScript.js"></script>
 </body>
 </html>

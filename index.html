@@ -26,18 +26,35 @@
           <a class="nav-link" href="./GetStarted.html">Get started</a>
           <a class="nav-link" href="./online.html">Online studying</a>
           <a class="nav-link" href="./Contacts.html">Contacts</a>
+          <button id="loginRegisterButton">Login/Register</button>
         </div>
       </div>
     </div>
   </nav>
+  <div class="overlay" id="overlay">
+    <div class="login-register-form" id="loginFormContainer">
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error" id="emailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <span class="error" id="passwordError"></span>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
 </section>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
 <!----------------------------CAROUSEL----------------------------->
+<hr>
+<hr>
+<hr>
+<hr>
 <section>
   <div class="container">
 
@@ -100,31 +117,50 @@
       </li>
     </ul>
     </div>
-  <!---------------List Group------------------>
+  <!---------------List Group+Accordion------------------>
+
     <div class="list-group">
-    <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="">
-      You want to learn a new language?
-    </label>
-    <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="">
-      You want to self-develop?
-    </label>
-    <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="">
-      You want to find a good company to practice your language skills?
-    </label>
-    <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="">
-      You want to change your life completely?
-    </label>
-    <label class="list-group-item">
-      Then click the button Get started in the navigation bar!
-    </label>
+      <label class="list-group-item" data-toggle="collapse" data-target="#item1">
+        <input class="form-check-input me-1" type="checkbox" value="">
+        You want to learn a new language?
+      </label>
+      <div id="item1" class="collapse">
+        Register to our courses!
+      </div>
+
+      <label class="list-group-item" data-toggle="collapse" data-target="#item2">
+        <input class="form-check-input me-1" type="checkbox" value="">
+        You want to self-develop?
+      </label>
+      <div id="item2" class="collapse">
+        Register to our courses!
+      </div>
+
+      <label class="list-group-item" data-toggle="collapse" data-target="#item3">
+        <input class="form-check-input me-1" type="checkbox" value="">
+        You want to find a good company to practice your language skills?
+      </label>
+      <div id="item3" class="collapse">
+        Register to our courses!
+      </div>
+
+      <label class="list-group-item" data-toggle="collapse" data-target="#item4">
+        <input class="form-check-input me-1" type="checkbox" value="">
+        You want to change your life completely?
+      </label>
+      <div id="item4" class="collapse">
+        Register to our courses!
+      </div>
+
+      <label class="list-group-item">
+        Then click the button Get started in the navigation bar!
+      </label>
     </div>
+
 
   </div>
 </section>
+
 <section>
   <footer>
     <p>Thanks for your attention</p>
@@ -134,6 +170,7 @@
 
 
 <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+<script src="indexScript.js"></script>
 <script type="importmap">
     {
       "imports": {
@@ -147,6 +184,9 @@
 
   new bootstrap.Popover(document.getElementById('popoverButton'))
 </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </body>
 
 </html>

@@ -37,33 +37,59 @@
 <hr>
 <section>
   <div class="container">
+    <!-------------------------Pagination+Tabs------------------------>
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-end">
         <li class="page-item disabled">
           <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
         </li>
-        <li class="page-item"><a class="page-link" href="https://learnenglish.britishcouncil.org/online-courses">1</a></li>
-        <li class="page-item"><a class="page-link" href="https://www.russianforfree.com/lessons-russian-language-contents.php">2</a></li>
-        <li class="page-item"><a class="page-link" href="https://www.ila-france.com/online-french-courses">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#tab1">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#tab2">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#tab3">3</a>
+        </li>
         <li class="page-item">
           <a class="page-link" href="#">Next</a>
         </li>
       </ul>
     </nav>
 
-  <p>
-    First page is about online english studying. <br>
-    Second page is about online russian studying. <br>
-    Third page is about online french studying.
-  </p>
+    <div id="tab1" class="tab-content">
+      <p>You can study english <a href="https://learnenglish.britishcouncil.org/online-courses">here</a>.</p>
+    </div>
+
+    <div id="tab2" class="tab-content">
+      <p>You can study russian <a href="https://www.russianforfree.com/lessons-russian-language-contents.php">here</a>.</p>
+    </div>
+
+    <div id="tab3" class="tab-content">
+      <p>You can study french <a href="https://www.ila-france.com/online-french-courses">here</a>.</p>
+    </div>
+    <hr>
+    <!-------------------------TO DO LIST--------------------------->
+    <div class="to-do-list">
+      <h1>Handle your language learning process with a to-do list below:</h1>
+      <div class="input-container">
+        <input type="text" id="task" placeholder="Enter a new task">
+        <button id="add">Add</button>
+      </div>
+      <ul id="taskList">
+        <!---tasks--->
+      </ul>
+    </div>
   </div>
 </section>
-</section>
+
 <section>
   <footer>
     <p>Thanks for your attention</p>
     <p>Site made by Karima💜</p>
   </footer>
 </section>
+<script src="onlineScript.js"></script>
 </body>
 </html>
