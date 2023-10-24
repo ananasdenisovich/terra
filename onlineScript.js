@@ -3,22 +3,32 @@ document.addEventListener('DOMContentLoaded', function () {
   const addBtn = document.getElementById('add');
   const taskList = document.getElementById('taskList');
 
-  function addTask() { //adds a new task to the list
+  function addTask() {
     const taskText = taskInput.value.trim();
     if (taskText === '') return;
 
     const li = document.createElement('li'); // creates a new list item with task text and buttons
 
-    li.innerHTML = `
-            <span>${taskText}</span>
-            <button class="delete">Delete</button>
-            <button class="complete">Complete</button>
-        `;
+    const span = document.createElement('span');
+    span.textContent = taskText;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'delete';
+
+    const completeButton = document.createElement('button');
+    completeButton.textContent = 'Complete';
+    completeButton.className = 'complete';
+
+    li.appendChild(span);
+    li.appendChild(deleteButton);
+    li.appendChild(completeButton);
 
     taskList.appendChild(li);
 
     taskInput.value = '';
   }
+
 
 
   function deleteTask(event) { //deletes task from the list

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const overlay = document.getElementById('overlay');
   const loginFormContainer = document.getElementById('loginFormContainer');
   const loginRegisterButton = document.getElementById('loginRegisterButton');
-  const emailInput = document.getElementById('email');
+  const usernameInput = document.getElementById('username');
   const passwordInput = document.getElementById('password');
 
   loginRegisterButton.addEventListener('click', function () { //displays a login/register button
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   loginForm.addEventListener('submit', function (event) { //submits login
-    if (emailInput.value && passwordInput.value) {// Check if the form is valid
+    if (usernameInput.value && passwordInput.value) {// Check if the form is valid
       loginFormContainer.style.display = 'none';
       overlay.style.pointerEvents = 'none';
     } else {
@@ -29,3 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
   });
 });
+
+
+
