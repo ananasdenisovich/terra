@@ -1,3 +1,4 @@
+//todolist
 document.addEventListener('DOMContentLoaded', function () {
   const taskInput = document.getElementById('task');
   const addBtn = document.getElementById('add');
@@ -7,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const taskText = taskInput.value.trim();
     if (taskText === '') return;
 
-    const li = document.createElement('li'); // creates a new list item with task text and buttons
+    const li = document.createElement('li');
 
     const span = document.createElement('span');
     span.textContent = taskText;
@@ -28,24 +29,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
     taskInput.value = '';
   }
-
-
-
-  function deleteTask(event) { //deletes task from the list
-    if (event.target.classList.contains('delete')) { //checks if a task exists and removes it
+  const completedSound = document.getElementById('completedSound');
+  function deleteTask(event) {
+    if (event.target.classList.contains('delete')) {
       event.target.parentElement.remove();
+      completedSound.play();
     }
   }
-
 
   function completeTask(event) {
-    if (event.target.classList.contains('complete')) { //checks if a task exists and crosses it
+    if (event.target.classList.contains('complete')) {
       event.target.parentElement.querySelector('span').classList.toggle('completed');
-
     }
   }
 
-  addBtn.addEventListener('click', addTask); //add button
+  function handleMouseOver(event) {
+    if (event.target.tagName === 'LI') {
+      event.target.style.backgroundColor = '#e0e0e0';
+    }
+  }
+
+  function handleMouseOut(event) {
+    if (event.target.tagName === 'LI') {
+      event.target.style.backgroundColor = 'white';
+    }
+  }
+
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      completeTask(event);
+    }
+  }
+
+  addBtn.addEventListener('click', addTask);
   taskInput.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
       addTask();
@@ -53,7 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   taskList.addEventListener('click', deleteTask);
   taskList.addEventListener('click', completeTask);
+
+  taskList.addEventListener('mouseover', handleMouseOver);
+  taskList.addEventListener('mouseout', handleMouseOut);
+  taskList.addEventListener('keypress', handleKeyPress);
 });
+
 
 //Pagination+Tabs.js
 document.addEventListener("DOMContentLoaded", function () {
@@ -75,3 +96,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//Tab animation
+function showTab(tabId) {
+  const tabContents = document.querySelectorAll('.tab-content');
+  tabContents.forEach(tabContent => {
+    tabContent.classList.remove('active');
+  });
+
+  setTimeout(() => {
+    const selectedTab = document.getElementById(tabId);
+    selectedTab.classList.add('active');
+  }, 10);
+}
+

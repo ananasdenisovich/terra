@@ -1,5 +1,7 @@
+//Timer
 document.addEventListener('DOMContentLoaded', function() { //countdown converting from previous labs
   const timerDisplay = document.getElementById('timer');
+  const progressBar = document.querySelector('.progress-bar');
   let countdown;
 
   function updateCountdown() {
@@ -14,8 +16,13 @@ document.addEventListener('DOMContentLoaded', function() { //countdown convertin
 
     const display = `${String(days).padStart(2, '0')}:${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     timerDisplay.textContent = display;//outputs a timer
+
+    const percentage = (timeRemaining / (365 * 24 * 60 * 60 * 1000)) * 100;
+    progressBar.style.width = 100 - percentage + '%';
   }
 
   updateCountdown();
   countdown = setInterval(updateCountdown, 1000);//sets an interval for second changing
 });
+
+

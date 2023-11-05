@@ -95,6 +95,7 @@ h5{
   margin-top: 30px;
   float: left;
 }
+
 form{
   clear-side: right;
   padding: 50px;
@@ -199,8 +200,13 @@ footer{
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 10px;
+  opacity: 0;
+  transition: opacity 1s;
 }
-
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}
 .countdown-container {
   max-width: 800px;
   padding: 20px;
@@ -216,6 +222,19 @@ footer{
 
 .countdown {
   font-weight: bold;
+}
+#timer {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #007BFF;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  transition: width 1s linear;
 }
 
 .rating {
@@ -254,4 +273,36 @@ footer{
 }
 .hidden {
   display: none;
+}
+
+#rating-form{
+  background-color: white;
+}
+table {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.question {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.droppable {
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px dashed #000000;
+  height: 50px;
+}
+
+.draggable {
+  background-color: #a9a9a9;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
 }

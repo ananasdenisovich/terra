@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag and Drop Game</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+<h1>Drag and Drop Game</h1>
+<table>
+  <tr>
+    <th>Questions</th>
+    <th>Answers</th>
+  </tr>
+  <tr>
+    <td class="question" id="question1">1. What is the official language of Brazil?</td>
+    <td class="droppable" id="answer1"></td>
+  </tr>
+  <tr>
+    <td class="question" id="question2">2. What do you call a person who speaks multiple languages fluently?</td>
+    <td class="droppable" id="answer2"></td>
+  </tr>
+  <tr>
+    <td class="question" id="question3">3. In English, what's the word for a word that sounds like the sound it represents (e.g., "buzz" or "meow")?</td>
+    <td class="droppable" id="answer3"></td>
+  </tr>
+  <tr>
+    <td class="question" id="question4">4. What is the language spoken by the majority of people in India?</td>
+    <td class="droppable" id="answer4"></td>
+  </tr>
+  <tr>
+    <td class="question" id="question5">5. What do you call the study of the origin and history of words?</td>
+    <td class="droppable" id="answer5"></td>
+  </tr>
+  <tr>
+    <td class="question" id="question6">6. What is the process of adapting a word from one language into another language called?</td>
+    <td class="droppable" id="answer6"></td>
+  </tr>
+  <tr>
+    <td class="question" id="question7">7. In linguistics, what's the term for the smallest unit of meaning in a language?</td>
+    <td class="droppable" id="answer7"></td>
+  </tr>
+</table>
+
+<div>
+  <div class="draggable" draggable="true">Portuguese</div>
+  <div class="draggable" draggable="true">Polyglot</div>
+  <div class="draggable" draggable="true">Onomatopoeia</div>
+  <div class="draggable" draggable="true">Hindi</div>
+  <div class="draggable" draggable="true">Etymology</div>
+  <div class="draggable" draggable="true">Translation</div>
+  <div class="draggable" draggable="true">Morpheme</div>
+</div>
+  <button id="checkButton">Check Answers</button>
+</div>
+<script src="Drag.js"></script>
+</body>
+</html>
